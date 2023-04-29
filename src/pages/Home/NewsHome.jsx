@@ -1,9 +1,16 @@
 import React from 'react';
+import { Button, Card } from 'react-bootstrap';
+import NewsCard from '../News/NewsCard';
 
-const NewsHome = () => {
+const NewsHome = ({ news }) => {
     return (
         <div>
-            <p>This is News Section</p>
+            <h4>Dragon News Home</h4>
+            <div>
+                {
+                    news.map(singleNews => <NewsCard key={singleNews._id} singleNews={singleNews}></NewsCard>)
+                }
+            </div>
         </div>
     );
 };

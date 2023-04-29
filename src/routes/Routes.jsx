@@ -4,7 +4,8 @@ import Main from "../layouts/Main";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Main></Main>
+        element: <Main></Main>,
+        loader: () => fetch('http://localhost:5000/')
     },
 ]);
 
