@@ -19,7 +19,6 @@ const Header = () => {
                     I can be a React component, multiple React components, or just some text...
                 </Marquee>
             </div>
-            <NavBarTop></NavBarTop>
         </>
     );
 };

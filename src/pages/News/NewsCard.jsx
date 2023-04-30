@@ -9,7 +9,7 @@ const NewsCard = ({ singleNews }) => {
     const { _id, title, details, image_url, category_id, author, rating, total_view } = singleNews;
     const { img, name, published_date } = author;
 
-    console.log(singleNews)
+    
     return (
         <Card className='mb-3'>
             <Card.Header className='d-flex align-items-center gap-2'>
@@ -28,7 +28,7 @@ const NewsCard = ({ singleNews }) => {
                 <Card.Title>{title}</Card.Title>
                 <Card.Img variant="top" src={image_url} />
                 <Card.Text>
-                    {details.length >= 250? <>{details.slice(0,250)} <Link>Read More</Link> </>: details}
+                    {details.length >= 250? <>{details.slice(0,250)} <Link to={`/news/${_id}`}>Read More</Link> </>: details}
                 </Card.Text>
             </Card.Body>
             <Card.Footer className='d-flex justify-content-between align-items-center'>

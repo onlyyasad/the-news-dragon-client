@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Header from '../pages/Shared/Header';
-import Footer from '../pages/Shared/Footer';
-import LeftNav from '../pages/Shared/LeftNav';
-import NewsHome from '../pages/Home/Category';
-import RightNav from '../pages/Shared/RightNav';
-import { Outlet, useLoaderData } from 'react-router-dom';
 import NavBarTop from '../pages/Shared/NavBarTop';
+import { Outlet } from 'react-router-dom';
+import Footer from '../pages/Shared/Footer';
+import RightNav from '../pages/Shared/RightNav';
 
-const Main = () => {
-
+const NewsLayout = () => {
     return (
         <Container>
             <Header></Header>
             <NavBarTop></NavBarTop>
             <Container className='mt-4'>
                 <Row>
-                    <Col sm={3}>
-                        <LeftNav></LeftNav>
-                    </Col>
-                    <Col sm={6}>
+                    <Col sm={9}>
                         <Outlet></Outlet>
                     </Col>
                     <Col sm={3}>
@@ -32,4 +26,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default NewsLayout;
